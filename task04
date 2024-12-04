@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int option;
+    double temperature;
+
+    cout << "Оберіть опцію (1 - Цельсій у Фаренгейт, 2 - Фаренгейт у Цельсій): ";
+    cin >> option;
+    cout << "Введіть температуру: ";
+    cin >> temperature;
+
+    if ((option == 1 && temperature < -273.15) || (option == 2 && temperature < -459.67)) {
+        cout << "Занадто холодно для підрахунку!" << endl;
+    } else {
+        cout << fixed << setprecision(2);
+        if (option == 1)
+            cout << "Температура у Фаренгейтах: " << (temperature * 9 / 5) + 32 << endl;
+        else if (option == 2)
+            cout << "Температура у Цельсіях: " << (temperature - 32) * 5 / 9 << endl;
+        else
+            cout << "Неправильний вибір!" << endl;
+    }
+
+    return 0;
+}
