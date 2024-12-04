@@ -1,0 +1,15 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    char ch;
+    cout << "Введіть символ: ";
+    cin >> ch;
+
+    cout << "Символ: " << ch << endl;
+    cout << "ASCII-код (десятковий): " << static_cast<int>(ch) << endl;
+    cout << "ASCII-код (шістнадцятковий): " << hex << uppercase << static_cast<int>(ch) << endl;
+
+    return 0;
+}
