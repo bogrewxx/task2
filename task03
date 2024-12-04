@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Введіть ціле число: ";
+    cin >> num;
+
+    cout << "Число парне: " << ((num % 2 == 0) ? "ТАК" : "НІ") << endl;
+    cout << "Ділиться на 8: " << ((num % 8 == 0) ? "ТАК" : "НІ") << endl;
+    cout << "Ділиться на 16: " << ((num % 16 == 0) ? "ТАК" : "НІ") << endl;
+
+    cout << "Число у вісімковому форматі: " << oct << num << endl;
+    cout << "Число у шістнадцятковому форматі: " << hex << uppercase << num << endl;
+
+    return 0;
+}
