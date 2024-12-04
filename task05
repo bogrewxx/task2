@@ -2,23 +2,29 @@
 using namespace std;
 
 int main() {
-    double score;
+    double points; 
 
+    
     cout << "Введіть кількість балів (0.0 ... 9.0): ";
-    cin >> score;
+    cin >> points;
 
-    if (score >= 0.0 && score <= 4.4)
-        cout << "Оцінка: 2.0 (незадовільна)" << endl;
-    else if (score >= 4.5 && score <= 5.2)
-        cout << "Оцінка: 3.0 (задовільна)" << endl;
-    else if (score >= 5.3 && score <= 6.2)
-        cout << "Оцінка: 3.5 (вище задовільно)" << endl;
-    else if (score >= 6.3 && score <= 7.2)
-        cout << "Оцінка: 4.0 (хороша)" << endl;
-    else if (score > 7.2 && score <= 9.0)
-        cout << "Оцінка: понад 4.0 (відмінна)" << endl;
-    else
-        cout << "Неправильний діапазон!" << endl;
+    
+    if (points >= 0.0 && points <= 9.0) {
 
-    return 0;
-}
+        if (points <= 4.4) {
+            cout << "Оцінка: 2.0 (незадовільно)" << endl;
+        } else if (points <= 5.2) {
+            cout << "Оцінка: 3.0 (задовільно)" << endl;
+        } else if (points <= 6.2) {
+            cout << "Оцінка: 3.5 (вище задовільно)" << endl;
+        } else if (points <= 7.2) {
+            cout << "Оцінка: 4.0 (добре)" << endl;
+        } else if (points <= 8.2) {
+            cout << "Оцінка: 4.5 (вище добре)" << endl;
+        } else if (points <= 9.0) {
+            cout << "Оцінка: 5.0 (дуже добре)" << endl;
+        }
+    } else {
+       
+        cout << "Неправильна кількість пунктів!" << endl;
+    }
